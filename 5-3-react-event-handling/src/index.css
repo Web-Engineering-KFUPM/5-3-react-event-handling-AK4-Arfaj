@@ -108,6 +108,7 @@ body {
   background: linear-gradient(135deg, var(--brand), var(--brand-2));
   color: white;
   box-shadow: 0 8px 20px rgba(124,58,237,.35);
+  border: none;
 }
 .btn--primary:hover { filter: brightness(1.05); }
 

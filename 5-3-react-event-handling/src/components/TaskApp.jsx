@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import TaskList from "./TaskList";
 
+
 export default function TaskApp() {
+
+  const [text, setText] = useState("")
   
   const handleSubmit = () => {
    
@@ -26,7 +29,9 @@ export default function TaskApp() {
           placeholder="Type a task..."
           className="input"
           // TODO: value={text}
+          value={text}
           // TODO: onChange={(e) => setText(e.target.value)}
+          onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") handleSubmit();
           }}
@@ -35,7 +40,7 @@ export default function TaskApp() {
           Submit
         </button>
       </div>
-
+          <p>{text}</p>
       {/*Render Task List and Enable Delete */}
       {/*Pass tasks and onDelete */}
       <TaskList /* tasks={tasks} onDelete={handleDelete} */ />
